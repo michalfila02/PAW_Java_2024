@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/templates/page-template.xhtml">
+
+	<ui:define name="pageContent">
+
+		<h:messages id="msg" />
+
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="5" styleClass="bottom-space">
+				<h:outputLabel for="ida" value="a:" />
+				
+				<h:inputText id="ida" value="#{calcBB.a}" required="true"
+					requiredMessage="a: #{txtCalcErr.calcParamRequired}"
+					converterMessage="a: #{txtCalcErr.calcParamIncorrect}" />
+
+				<h:outputLabel for="idb" value="b:" />
+				
+				<h:inputText id="idb" value="#{calcBB.b}" required="true"
+					requiredMessage="b: #{txtCalcErr.calcParamRequired}"
+					converterMessage="b: #{txtCalcErr.calcParamIncorrect}" />
+				
+				
+				<h:outputLabel for="idc" value="c:" />
+				
+				<h:inputText id="idc" value="#{calcBB.c}" required="true"
+					requiredMessage="c: #{txtCalcErr.calcParamRequired}"
+					converterMessage="c: #{txtCalcErr.calcParamIncorrect}" />
+				
+				<h:commandButton value="#{txtMain.add}" action="#{calcBB.calc()}"/>
+			</h:panelGrid>
+			
+		</h:form>
+		<h:form>
+		<h:commandLink value="#{txtMain.info}" action="#{calcBB.info()}" />
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>
