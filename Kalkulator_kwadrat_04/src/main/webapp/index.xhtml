@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+ 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
@@ -13,31 +14,31 @@
 
 		<h:form>
 			<h:panelGrid columns="2" cellpadding="5" styleClass="bottom-space">
-				<h:outputLabel for="ida" value="a:" />
+				<h:outputLabel for="ida" value="a: " indicateRequired="false"/>
 				
-				<h:inputText id="ida" value="#{calcBB.a}" required="true"
+				<p:inputText id="ida" value="#{calcBB.a}" required="true"
 					requiredMessage="a: #{txtCalcErr.calcParamRequired}"
 					converterMessage="a: #{txtCalcErr.calcParamIncorrect}" />
 
-				<h:outputLabel for="idb" value="b:" />
+				<p:outputLabel for="idb" value="b: " indicateRequired="false"/>
 				
-				<h:inputText id="idb" value="#{calcBB.b}" required="true"
+				<p:inputText id="idb" value="#{calcBB.b}" required="true"
 					requiredMessage="b: #{txtCalcErr.calcParamRequired}"
 					converterMessage="b: #{txtCalcErr.calcParamIncorrect}" />
 				
 				
-				<h:outputLabel for="idc" value="c:" />
+				<p:outputLabel for="idc" value="c: " indicateRequired="false"/>
 				
-				<h:inputText id="idc" value="#{calcBB.c}" required="true"
+				<p:inputText id="idc" value="#{calcBB.c}" required="true"
 					requiredMessage="c: #{txtCalcErr.calcParamRequired}"
 					converterMessage="c: #{txtCalcErr.calcParamIncorrect}" />
 				
-				<h:commandButton value="#{txtMain.add}" action="#{calcBB.calc()}"/>
+				<p:commandButton value="#{txtMain.add}" action="#{calcBB.calc()}" ajax="false" styleClass="ui-button-success"/>
 			</h:panelGrid>
 			
 		</h:form>
 		<h:form>
-		<h:commandLink value="#{txtMain.info}" action="#{calcBB.info()}" />
+		<p:commandButton value="#{txtMain.info}" action="#{calcBB.info()}" ajax="false" styleClass="ui-button-help" />
 		</h:form>
 	</ui:define>
 
