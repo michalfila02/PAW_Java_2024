@@ -24,8 +24,6 @@ public class User implements Serializable {
 	@Column(name="email_verified_at")
 	private Timestamp emailVerifiedAt;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private BigInteger id;
 
 	private String name;
