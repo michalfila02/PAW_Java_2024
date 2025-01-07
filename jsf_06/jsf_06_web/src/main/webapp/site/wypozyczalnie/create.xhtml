@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Wypozyczalnie</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" />
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel>
+            <h2 style="font-weight: bold; font-size: 1.25rem; color: #4A5568; line-height: 1.5;">
+                Wypozyczalnie
+            </h2>
+        </p:panel>
+        
+        <p:panel>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Menu</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <p:commandLink value="Klienci" action="#{nav.IKlienci()}" styleClass="nav-link" ajax="false"/>
+                            </li>
+                            <li class="nav-item">
+                                <p:commandLink value="Wypożyczalnia" action="#{nav.IWypozyczalnia()}" styleClass="nav-link" ajax="false"/>
+                            </li>
+                            <li class="nav-item">
+                                <p:commandLink value="Samochody" action="#{nav.ISamochody()}" styleClass="nav-link" ajax="false"/>
+                            </li>
+                            <li class="nav-item">
+                                    <p:commandLink value="Wypożyczalnie" action="#{nav.IWypozyczalnie()}" styleClass="nav-link" ajax="false"/>
+                            </li>
+                            <li class="nav-item">
+                                    <p:commandLink value="Role" action="#{nav.IRole()}" styleClass="nav-link" ajax="false"/>
+                            </li>
+                            <li class="nav-item">
+                                    <p:commandLink value="Pracownicy" action="#{nav.IPracownicy()}" styleClass="nav-link" ajax="false"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </p:panel>
+
+    </h:form>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</h:body>
+</html>
